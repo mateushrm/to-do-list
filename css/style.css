@@ -51,7 +51,7 @@ input, select{
 }
 
 /* header */
-.todo-conteudo{
+.conteudo{
     max-width: 450px;
     margin: 3rem auto 0;
     background-color: #fdfdfd;
@@ -59,21 +59,20 @@ input, select{
     border-radius: 15px;
 }
 
-.todo-conteudo header{
+.conteudo header{
     text-align: center;
     padding: 0 1rem 1rem;
     border-bottom: 1px solid #ccc;
 }
 
 /* form */
-#form-todo, #edit-form{
+#form, #edit-form{
     padding: 1rem;
     border-bottom: 1px solid #ccc;
 }
 
 #form-todo p, #edit-form p{
-    margin-bottom: 0.5rem;
-    font-weight: bold;
+    display: flex;
 }
 
 .controle-form{
