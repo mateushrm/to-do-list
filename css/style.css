@@ -13,6 +13,7 @@ body{
     background-image: url(../img/img-1.jpg);
     background-position: center;
     background-size: cover;
+    background-attachment: fixed;
 }
 
 button{
