@@ -10,19 +10,19 @@ let oldTitle;
 
 // Funções
 const saveTodo = (text) =>{
-    const todo = document.createElement('div');
+    const todo = document.createElement("div");
     todo.classList.add("todo");
     
     const todoTitle = document.createElement("h3");
     todoTitle.innerText = text;
     todo.appendChild(todoTitle);
 
-    const done = document.createElement('button');
-    done.classList.add('concluido');
+    const done = document.createElement("button");
+    done.classList.add("concluido");
     done.innerHTML = '<i class="fa-solid fa-check"></i>';
     todo.appendChild(done);
 
-    const edit = document.createElement('button');
+    const edit = document.createElement("button");
     edit.classList.add('edit');
     edit.innerHTML = '<i class="fa-solid fa-pen"></i>';
     todo.appendChild(edit);
@@ -53,10 +53,10 @@ const updateTodo = (text) =>{
         if(todoTitle.innerText === oldTitle){
             todoTitle.innerText = text;
         }
-    })
-}
+    });
+};
 
-//Eventos
+// Eventos
 form.addEventListener('submit', (e) =>{
     e.preventDefault()
 
@@ -74,12 +74,16 @@ document.addEventListener('click', (e) =>{
     let todoTitle;
 
     if(parentElement && parentElement.querySelector("h3")){
-        todoTitle = parentElement.querySelector("h3").innerText;
+        todoTitle = parentElement.querySelector("h3").innerText || "";
     }
 
     if(targetElement.classList.contains("concluido")){
-        parentElement.classList.toggle('done');
-    } 
+        parentElement.classList.toggle("done");
+    }
+
+    if(targetElement.classList.contains("remove")){
+        parentElement.remove();
+    }
 
     if(targetElement.classList.contains("edit")){
         toogleForm();
@@ -87,10 +91,7 @@ document.addEventListener('click', (e) =>{
         editInput.value = todoTitle;
         oldTitle = todoTitle;
     }
-    
-    if(targetElement.classList.contains("remove")){
-        parentElement.remove();
-    } 
+
 });
 
 cancelEdit.addEventListener("click", (e) =>{
@@ -101,11 +102,11 @@ cancelEdit.addEventListener("click", (e) =>{
 edit.addEventListener("submit", (e) =>{
     e.preventDefault();
 
-    const editInput = edit.value;
+    const editInputValue = editInput.value;
 
-    if(editInput){
+    if(editInputValue){
         //atualizar item
-        updateTodo(editInput);
+        updateTodo(editInputValue);
     }
 
     toogleForm();

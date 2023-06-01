@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To-do Avançado</title>
+    <title>To-do List</title>
     <!--CSS-->
     <link rel="stylesheet" href="css/style.css">
     <!--JS-->
@@ -15,7 +15,7 @@
 <body>
     <div class="conteudo">
         <header>
-            <h1>To-do Avançado</h1>
+            <h1>To-do List</h1>
         </header>
         <form id="form">
             <p>Adicione a sua tarefa:</p>
@@ -36,28 +36,9 @@
             </div>
             <button id="cancel-edit">Cancelar</button>
         </form>
-        <div id="ferramentas">
-            <div id="pesquisa">
-                <h4>Pesquisar:</h4>
-                <form>
-                    <input type="text" id="pesquisar-input" placeholder="Buscar...">
-                    <button id="erase-button">
-                        <i class="fa-solid fa-delete-left"></i>
-                    </button>
-                </form>
-            </div>
-            <div id="filtrar">
-                <h4>Filtrar:</h4>
-                <select id="filtrar-select">
-                    <option value="all">Todos</option>
-                    <option value="done">Feitos</option>
-                    <option value="todo">A fazer</option>
-                </select>
-            </div>
-        </div>
             <div id="todo-list">
                 <div class="todo">
-                    <h3>Ir aculá</h3>
+                    <h3>Fazer compras</h3>
                     <button class="concluido">
                         <i class="fa-solid fa-check"></i>
                     </button>
@@ -69,7 +50,31 @@
                     </button>
                 </div>
                 <div class="todo">
-                    <h3>Arrumar coisas</h3>
+                    <h3>Arrumar quarto</h3>
+                    <button class="concluido">
+                        <i class="fa-solid fa-check"></i>
+                    </button>
+                    <button class="edit">
+                        <i class="fa-solid fa-pen"></i>
+                    </button>
+                    <button class="remove">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+                <div class="todo">
+                    <h3>Ler Harry Potter</h3>
+                    <button class="concluido">
+                        <i class="fa-solid fa-check"></i>
+                    </button>
+                    <button class="edit">
+                        <i class="fa-solid fa-pen"></i>
+                    </button>
+                    <button class="remove">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+                <div class="todo">
+                    <h3>Escrever relatório</h3>
                     <button class="concluido">
                         <i class="fa-solid fa-check"></i>
                     </button>
@@ -82,5 +87,5 @@
                 </div>
             </div>
         </div>
-</body>
+    </body>
 </html>
